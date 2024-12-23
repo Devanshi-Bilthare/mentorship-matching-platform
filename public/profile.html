@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="navbar">
+        
+    </div>
+
+    <main>
+        <section class="profile-setup">
+            <h1>Profile Setup</h1>
+            <form id="profileForm">
+                <div class="form-section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role"><i class="fas fa-user-tag"></i> Role</label>
+                            <select id="role" name="role" required>
+                                <option value="" disabled selected>Select your role</option>
+                                <option value="mentor">Mentor</option>
+                                <option value="mentee">Mentee</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                   
+    
+                    <label for="bio"><i class="fas fa-pencil-alt"></i> Bio</label>
+                    <textarea id="bio" name="bio" placeholder="Write a brief bio" required></textarea>
+                </div>
+    
+                <div class="tags-section">
+                    <h3><i class="fas fa-tools"></i> Skills</h3>
+                    <div class="tags" id="skillsTags"></div>
+                    <input
+                        type="text"
+                        id="skillInput"
+                        placeholder="Add a skill and press Enter"
+                        
+                    />
+                    <input type="hidden" id="skillsHiddenInput" name="skills" />
+                </div>
+    
+                <div class="tags-section">
+                    <h3><i class="fas fa-heart"></i> Interests</h3>
+                    <div class="tags" id="interestsTags"></div>
+                    <input
+                        type="text"
+                        id="interestInput"
+                        placeholder="Add an interest and press Enter"
+                        
+                    />
+                    <input type="hidden" id="interestsHiddenInput" name="interests" />
+                </div>
+    
+                <!-- Submit Button -->
+                <button type="submit" id="saveProfile">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </form>
+        </section>
+        <section class="requests-connections">
+            <h1>Connections</h1>
+            <div class="tabs">
+                <button class="tab active" data-tab="receivedRequests">Received Requests</button>
+                <button class="tab" data-tab="sentRequests">Sent Requests</button>
+                <button class="tab" data-tab="connections">Connections</button>
+            </div>
+    
+            <div class="tab-content" id="receivedRequests">
+                <ul id="receivedRequestsList"></ul>
+            </div>
+    
+            <div class="tab-content hidden" id="sentRequests">
+                <ul id="sentRequestsList"></ul>
+            </div>
+    
+            <div class="tab-content hidden" id="connections">
+                <ul id="connectionsList"></ul>
+            </div>
+        </section>
+    </main>
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./script.js"></script>
+    <script src="./profile.js"></script>
+
+</body>
+</html>

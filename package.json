@@ -9,6 +9,7 @@
     "gitignore": "^0.7.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "mysql2": "^3.11.5"
+    "mysql2": "^3.11.5",
+    "path": "^0.12.7"
   }
 }

@@ -2,7 +2,7 @@ require('dotenv').config('./.env');
 const express = require('express');
 const db = require('./config/db')
 const createTable = require('./Tables/UserTables');
-// const { errorHandler, notFound } = require('./middlewares/errorHandler');
+const path = require('path');
 const app = express();
 const cors = require('cors');
 
@@ -17,6 +17,7 @@ const http = require('http');
 
 const server = http.createServer(app);
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev'));
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));

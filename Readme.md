@@ -27,13 +27,13 @@ Before setting up the platform, ensure you have the following installed on your 
 ## Setup Instructions
 
 1. **Clone the repository**:
-   
+   ```bash
    git clone https://github.com/Devanshi-Bilthare/mentorship-matching-platform
-
+   ```
 2. **Install dependencies**:
-   
+   ```bash
    npm install
-   
+   ```
 
 3. **Set up the database**:
    - Open your MySQL server.
